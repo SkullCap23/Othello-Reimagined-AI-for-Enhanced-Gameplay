@@ -1,0 +1,32 @@
+// Alpha-Beta Pruning Tree Structure
+digraph {
+	R [label="Root Node
+α = -∞, β = +∞"]
+	A [label="Node A
+(Move 1)
+α = -∞, β = +∞"]
+	B [label="Node B
+(Move 2)
+α = -∞, β = +∞"]
+	R -> A
+	R -> B
+	A1 [label="Node A1
+(Move 1.1)
+Value = vA1"]
+	A2 [label="Node A2
+(Move 1.2)
+Value = vA2"]
+	A -> A1
+	A -> A2
+	B1 [label="Node B1
+(Move 2.1)
+Value = vB1"]
+	B2 [label="Node B2
+(Move 2.2)
+Value = vB2"]
+	B -> B1
+	B -> B2
+	P [label="Pruned Branch
+(α ≥ β)"]
+	A2 -> P [label=Prune style=dotted]
+}
